@@ -1,4 +1,5 @@
 fun main(){
+    // variables are containers or holders of data that need to be stored
     // variables declared inside the main function are said to be local while those declared outside are said to be global that is they have a wider scope
     val name = "Kotlin"
     println("I love coding in $name!")
