@@ -1,6 +1,7 @@
 // grade calculator
 
 fun main(){
+    print("Enter your score: ")
     val grade = readln().toInt()
     if (grade >= 0 && grade < 60){
         print("Your grade equals F")
@@ -16,3 +17,5 @@ fun main(){
         print("Your grade equals unknown")
     }
 }
+
+// when is more clean and can be used idiomatically for this task

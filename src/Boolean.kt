@@ -17,6 +17,5 @@ fun main(){
 
     val isSunny = !isRaining // this will make isSunny true
      */
-    println("The variable isTrue is $isTrue while variable isFalse is $isFalse")
-
+    println("The variable isTrue is '$isTrue' while variable isFalse is '$isFalse'")
 }

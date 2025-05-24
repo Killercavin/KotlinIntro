@@ -5,11 +5,13 @@ fun main(){
     println("I love coding in $name!")
 
     var a  = 5
-    var s = 'c'
+    println("The initial value of a is $a")
+    val s = 'c'
     println("The value of s is $s")
 
     a = 7 // var is used to declare mutable variables
     // val is used to declare immutable variables
+    println("The value of a after the reassignment is $a")
 
 
     /** it is recommended to declare all variables as immutable unless otherwise

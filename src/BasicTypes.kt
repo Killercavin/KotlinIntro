@@ -17,9 +17,8 @@ fun main(){
     As well Kotlin allows ou to null variables
      */
 
-    var a: Int? = null // how to make variables null in Kotlin
-    a = 2
-    println("Mary is ${a + 3} years old")
-
-
+    val a = null // how to make variables null in Kotlin
+    val b = 2
+    println("Mary is ${b + 3} years old")
+    println(a)
 }

@@ -9,14 +9,9 @@ class Person{
 
 
 
-class Person(val name: String, val age: Int, val gender: String){
-}
+class Person(val name: String, val age: Int, val gender: String)
 
-class Vehicle(name: String, model: String, color: String){
-    val name = name
-    val model = model
-    val color = color
-}
+class Vehicle(val name: String, val model: String, val color: String)
 
 
 fun students(){
