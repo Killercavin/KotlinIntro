@@ -1,4 +1,4 @@
-package functions
+package functions.declaration
 
 // some simple fun that add given integer numbers
 fun sum(a: Int, b: Int): Int {

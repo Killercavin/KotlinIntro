@@ -1,4 +1,4 @@
-package functions
+package functions.declaration
 
 /**
  * In Kotlin, functions form the bedrock of your code. They define blocks of code that you can execute and reuse throughout your program. A function is a sequence of instructions put together to operate. In a way, it is a kind of subprogram.

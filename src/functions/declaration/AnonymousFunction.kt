@@ -1,4 +1,4 @@
-package functions
+package functions.declaration
 
 val anonymousFunction = fun (text: String): String {
     return text // return type can be explicit

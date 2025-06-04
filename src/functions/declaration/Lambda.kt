@@ -1,4 +1,4 @@
-package functions
+package functions.declaration
 
 val add = { x: Int, y: Int -> x + y } // this is a lambda function
 
