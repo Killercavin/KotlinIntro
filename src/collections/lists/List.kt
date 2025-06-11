@@ -1,4 +1,4 @@
-package collections.lists
+    package collections.lists
 
 /**
  * List is a container that keeps the elements of a given type in the same order in which they were added. Also, List allows duplicate elements. So, if you want to store items in the order of their insertion, and it doesn't matter to you that they can be repeated, use List. For example, you could store student rating history in a List.
