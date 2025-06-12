@@ -16,6 +16,7 @@ fun main() {
     println("\nDoes shopping contains eggs? $containsEggs")
 
     // containsAll method accepts more than 1 argument
+    shopping.containsAll(listOf("Milk", "Eggs", "Tea")) // the collection can either be list or set
 
     // lists has a method for getting the index of a given item, if not found returns -1
     println("\nWhat is the index of bananas from the shopping list? ${shopping.indexOf("Bananas")}") // output: -1 since we don't have bananas on the shopping list
