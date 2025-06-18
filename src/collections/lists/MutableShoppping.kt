@@ -38,4 +38,13 @@ fun main() {
 
     // shuffling randomize the order of items
     mutableShopping.shuffle()
+
+    // retainAll function retains all the items that are held in another collection and removes everything else
+    mutableShopping.retainAll(listOf("Cookies", "sugar", "tea"))
+
+    // copying a given list
+    val copyOfMutableShopping = mutableShopping.toList() // makes a copy of it as immutable .toMutableList() will make a mutable copy of it
+
+    // getting the size of a list
+    mutableShopping.size
 }
