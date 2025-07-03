@@ -20,146 +20,162 @@ roam(): What the animal does when it’s not eating or sleeping.
 sleep(): Makes the animal take a nap.
  */
 
-open class Animal {
-    // the properties
+/*
+Declare a class with keyword open to make it be inherited or overridden
+Declare a class with the keyword abstract to prevent it from being instantiated
+A class that isn't an abstract class is a concrete class therefore can be instantiated ie var animal = Animal()
+ */
 
-    open val image: String = ""
-    open val food: String = ""
-    open val habitat: String = ""
-    var hunger: Int = 10
+// the Animals class
+abstract class Animal(
+    val image: String,
+    val food: String,
+    val habitat: String,
+) {
+    private val hunger: Int = 10
 
-    /* The functions */
+    abstract fun makeNoise()
+    abstract fun eat()
+    abstract fun roam()
 
-    open fun makeNoise() {
-        println("The Animal is making noise")
-    }
-
-    open fun eat() {
-        println("The Animal is eating")
-    }
-
-    open fun roam() {
-        println("The Animal is roaming")
-    }
-    
     fun sleep() {
         println("The Animal is sleeping")
     }
 }
 
-/* the subclasses */
+/* Animals subclass */
 
-// Hippo
-class Hippo : Animal() {
-    override val image: String = "hippo.png"
-    override val food: String = "grass"
-    override val habitat: String = "water"
-
-    override fun makeNoise() {
-        println("Grunt! Grunt!")
-    }
-
-    override fun eat() {
-        println("The Hippo is eating $food")
-    }
-}
-
-// Canine
-open class Canine : Animal() {
-    override fun roam() {
-        println("The Canine is roaming")
-    }
-}
-
-// Wolf a subclass of Canine
-class Wolf : Canine() {
-    override val image: String = "wolf.png"
-    override val habitat: String = "forests"
-    override val food: String = "meat"
-
-    override fun makeNoise() {
-        println("Howl! Howl!")
-    }
-
-    override fun eat() {
-        println("The Wolf is eating $food")
-    }
-}
-
-// Fox a subclass of Canine
-class Fox : Canine() {
-    override val image: String = "fox.png"
-    override val habitat: String = "forests"
-    override val food: String = "meat"
-
-    override fun makeNoise() {
-        println("Yip! Yip!")
-    }
-
-    override fun eat() {
-        println("The Fox is eating $food")
-    }
-}
-
-// Feline
-
-open class Feline : Animal() {
+// Feline subclass
+abstract class Feline(
+    image: String,
+    food: String,
+    habitat: String,
+) : Animal(image, food, habitat) {
     override fun roam() {
         println("The Feline is roaming")
     }
 }
 
-// Lion a subclass of Feline
-class Lion : Feline() {
-    override val image: String = "lion.png"
-    override val habitat: String = "forests"
-    override val food: String = "meat"
-
-    override fun makeNoise() {
-        println("Roar! Roar!")
-    }
-
-    override fun eat() {
-        println("The Lion is eating $food")
+// Canine subclass
+abstract class Canine(
+    image: String,
+    food: String,
+    habitat: String,
+) : Animal(image, food, habitat) {
+    override fun roam() {
+        println("The Canine is roaming")
     }
 }
 
-// Cheetah a subclass of Feline
-class Cheetah : Feline() {
-    override val image: String = "cheetah.png"
-    override val food: String = "meat"
-    override val habitat: String = "forests"
-
+// concrete class Hippo
+class Hippo(
+    image: String = "hippo.png",
+    food: String = "grass",
+    habitat: String = "water"
+) : Animal(image, food, habitat) {
     override fun makeNoise() {
-        println("Chirp! Chur!")
+        println("Hippo sound!")
+    }
+    override fun eat() {
+        println("Hippo is eating $food")
     }
 
-    override fun eat() {
-        println("The Cheetah is eating $food")
+    override fun roam() {
+        println("Hippo is roaming")
     }
 }
 
-// Lynx a subclass of Feline
-class Lynx : Feline() {
-    override val image: String = "lynx.png"
-    override val habitat: String = "forests"
-    override val food: String = "meat"
 
+/* subclasses of Feline class */
+
+// concrete class Lion
+class Lion(
+    image: String = "lion.png",
+    food: String = "meat",
+    habitat: String = "forests"
+) : Feline(image, food, habitat) {
     override fun makeNoise() {
-        println("Pur! Pur!")
+        println("Lion sound!")
     }
-
     override fun eat() {
-        println("The Lynx is eating $food")
+        println("Lion is eating $food")
+    }
+}
+
+// concrete class Leopard
+class Cheetah(
+    image: String = "cheetah.png",
+    food: String = "meat",
+    habitat: String = "forests"
+) : Feline(image, food, habitat) {
+    override fun makeNoise() {
+        println("Cheetah sound!")
+    }
+    override fun eat() {
+        println("Cheetah is eating $food")
+    }
+}
+
+// concrete class Lynx
+class Lynx(
+    image: String = "lynx.png",
+    food: String = "meat",
+    habitat: String = "forests"
+) : Feline(image, food, habitat) {
+    override fun makeNoise() {
+        println("Lynx sound!")
+    }
+    override fun eat() {
+        println("Lynx is eating $food")
+    }
+}
+
+/* subclasses of Feline class */
+
+// concrete class Wolf
+class Wolf(
+    image: String = "wolf.png",
+    food: String = "meat",
+    habitat: String = "forests"
+) : Canine(image, food, habitat) {
+    override fun makeNoise() {
+        println("Wolf sound!")
+    }
+    override fun eat() {
+        println("Wolf is eating $food")
+    }
+}
+
+// concrete class Fox
+class Fox(
+    image: String = "fox.png",
+    food: String = "meat",
+    habitat: String = "forests"
+) : Canine(image, food, habitat) {
+    override fun makeNoise() {
+        println("Fox sound!")
+    }
+    override fun eat() {
+        println("Fox is eating $food")
     }
 }
 
 fun main() {
-    val wolf = Wolf()
-    wolf.makeNoise() // calls the function from the Wolf class
-    wolf.roam() // calls the function from the Canine class
-    wolf.sleep() // calls the function from the Animal class
+    val animals = arrayOf(
+        Hippo(),
+        Lion(),
+        Cheetah(),
+        Lynx(),
+        Wolf(),
+        Fox()
+    )
+
+    for (animal in animals) {
+        animal.makeNoise()
+        animal.eat()
+        animal.roam()
+        animal.sleep()
+        println(animal.image)
+        println(animal.habitat)
+    }
 }
-
-
-// NOTE: I never took the constructor approach even though it's the best
