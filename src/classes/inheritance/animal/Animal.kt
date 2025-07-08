@@ -26,17 +26,44 @@ Declare a class with the keyword abstract to prevent it from being instantiated
 A class that isn't an abstract class is a concrete class therefore can be instantiated ie var animal = Animal()
  */
 
+/*
+Interfaces are used to define a protocol for common behavior so that you can
+benefit from polymorphism without having to rely on a strict inheritance
+structure
+
+Interfaces are similar to abstract classes in that they can’t be
+instantiated, and they can define abstract or concrete functions and properties,
+but there’s one key difference: a class can implement multiple interfaces, but
+can only inherit from a single direct superclass
+
+So using interfaces can
+provide the same benefits as using abstract classes, but with more flexibility
+ */
+
+
+// Interface
+interface Roamable {
+    val velocity: Int
+        get() = 20
+    fun roam() {
+        println("The Roamable is roaming")
+    }
+}
+
 // the Animals class
 abstract class Animal(
     val image: String,
     val food: String,
     val habitat: String,
-) {
+) : Roamable {
     private val hunger: Int = 10
 
     abstract fun makeNoise()
     abstract fun eat()
-    abstract fun roam()
+
+    override fun roam() {
+        println("The animal is roaming")
+    }
 
     fun sleep() {
         println("The Animal is sleeping")
@@ -102,7 +129,7 @@ class Lion(
     }
 }
 
-// concrete class Leopard
+// concrete class Cheetah
 class Cheetah(
     image: String = "cheetah.png",
     food: String = "meat",
@@ -160,6 +187,21 @@ class Fox(
     }
 }
 
+// auxiliary class Vet
+class Vet {
+    fun giveShort(animal: Animal) {
+        // do something medical
+        animal.makeNoise()
+    }
+}
+
+// interfaced class Vehicle inheriting from Roamable
+class Vehicle : Roamable {
+    override fun roam() {
+        println("The Vehicle is roaming")
+    }
+}
+
 fun main() {
     val animals = arrayOf(
         Hippo(),
@@ -177,5 +219,18 @@ fun main() {
         animal.sleep()
         println(animal.image)
         println(animal.habitat)
+    }
+
+    val vet = Vet()
+    vet.giveShort(Wolf())
+
+    val roamable = arrayOf(Hippo(), Wolf(), Vehicle())
+    for (item in roamable) {
+        item.roam()
+
+        if (item is Animal) {
+            item.makeNoise()
+            item.eat()
+        }
     }
 }
