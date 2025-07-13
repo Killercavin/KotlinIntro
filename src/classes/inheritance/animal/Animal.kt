@@ -157,6 +157,29 @@ class Lynx(
     }
 }
 
+open class Cat(
+    image: String = "cat.png",
+    food: String = "meat",
+    habitat: String = "home"
+) : Feline(image, food, habitat) {
+    override fun makeNoise() {
+        println("Cat sound!")
+    }
+    override fun eat() {
+        println("Cat is eating $food")
+    }
+}
+
+class Kitten(image: String = "kitten.png", food: String = "meat", habitat: String = "home") : Cat(image, food, habitat) {
+    override fun makeNoise() {
+        println("Meow! Meow!")
+    }
+
+    override fun eat() {
+        println("Meow is eating $food")
+    }
+}
+
 /* subclasses of Feline class */
 
 // concrete class Wolf
