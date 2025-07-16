@@ -20,3 +20,15 @@ values of each object’s properties. If, for example, you create two Recipe
 objects that hold identical property values, comparing the two objects with the
 == operator will evaluate to true, because they hold the same data
  */
+
+/*
+When the compiler generates implementations for data class functions, such as
+overriding the equals function and creating a copy function, it only includes
+the properties defined in the primary constructor. So if you add properties to
+a data class by defining them in the class body, they won’t be included in any of
+the generated functions.
+ */
+
+data class IgnoredDataClass(val name: String, val age: Int) {
+    val city: String = "" // this won't be included in the generated functions
+}
