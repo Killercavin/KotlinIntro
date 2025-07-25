@@ -1,11 +1,13 @@
-class Database private constructor(){
+package basic
+
+class Database private constructor() {
     companion object{
         private var instance: String? = null
 
-        fun getInstance(): String{
-            instance = if (instance == null){
+        fun getInstance(): String {
+            instance = if (instance == null) {
                 String()
-            } else{
+            } else {
                 "Kotlin Database Instance"
             }
             return instance!!

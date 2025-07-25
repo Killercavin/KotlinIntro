@@ -8,7 +8,7 @@ fun main() {
     println(anonymousFunction("I am anonymous"))
 }
 
-/**
+/*
  * Key features of anonymous functions:
  *
  *     Use the fun keyword.

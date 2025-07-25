@@ -38,7 +38,7 @@ and properties.
 fun main() {
     // making variable w nullable
      var wolf: Wolf? = Wolf() // we are pulling this object from classes.inheritance.animal.Wolf of our project
-    println(wolf?.eat())
+    println(wolf?.eat()) // this means that eat() is only called when the wolf is not null
 
     // to remove the wolf reference we could do
      wolf = null // making it null to remove the object reference

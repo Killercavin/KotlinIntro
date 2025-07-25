@@ -1,3 +1,5 @@
+package basic
+
 // Building a basic calculator
 
 fun main(){

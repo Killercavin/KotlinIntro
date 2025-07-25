@@ -1,3 +1,5 @@
+package basic
+
 // grade calculator
 
 fun main(){

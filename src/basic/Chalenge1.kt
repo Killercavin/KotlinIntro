@@ -1,3 +1,4 @@
+package basic
 // Even odd number checker
 
 fun evenOddPicker(input: Int): Boolean = input % 2 == 0

@@ -1,3 +1,5 @@
+package basic
+
 fun main(){
     /*
     In total kotlin consists of the following basic types

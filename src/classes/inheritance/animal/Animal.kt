@@ -56,7 +56,7 @@ abstract class Animal(
     val food: String,
     val habitat: String,
 ) : Roamable {
-    private val hunger: Int = 10
+    val hunger: Int = 10
 
     abstract fun makeNoise()
     abstract fun eat()

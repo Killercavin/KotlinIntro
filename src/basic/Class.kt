@@ -1,3 +1,5 @@
+package basic
+
 class Car{
     var color = ""
     var model = ""
@@ -26,7 +28,7 @@ fun main(){
 
 
     // another instance of car
-    var car1 = Car()
+    val car1 = Car()
     car1.color = "Blue"
     car1.model = "Ford"
     car1.yearOfManufacture = 2021
@@ -36,7 +38,7 @@ fun main(){
     car1.stop()
 
     // another instance of car
-    var car2 = Car()
+    val car2 = Car()
     car2.color = "White"
     car2.model = "Audi"
     car2.yearOfManufacture = 2020
@@ -46,7 +48,7 @@ fun main(){
     car2.stop()
 
     // another instance of car
-    var car3 = Car()
+    val car3 = Car()
     car3.color = "Black"
     car3.model = "Mercedes Benz"
     car3.yearOfManufacture = 2021
@@ -56,7 +58,7 @@ fun main(){
     car3.stop()
 
     // another instance of a car
-    var car4 = Car()
+    val car4 = Car()
     car4.color = "Green"
     car4.model = "Tesla"
     car4.yearOfManufacture = 2022

@@ -6,7 +6,7 @@ fun main() {
     println(add(1, 2))
 }
 
-/**
+/*
  * Key features of lambda functions:
  *    Implicit return (last expression is returned)
  *

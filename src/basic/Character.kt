@@ -1,3 +1,5 @@
+package basic
+
 /*
 Character types are used to store single character values ie 'a', or symbols ie '@'
 To store character types the letter or symbol is placed within the single quotes

@@ -8,5 +8,6 @@ data class Mushroom(
     // secondary constructor
     constructor(isMagicParam: Boolean) : this(0, isMagicParam) {
         // body carrying the code that is compiled when the secondary constructor is called
+        TODO("Do something else")
     }
 }

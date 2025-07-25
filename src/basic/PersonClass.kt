@@ -14,7 +14,7 @@ class Person(val name: String, val age: Int, val gender: String)
 class Vehicle(val name: String, val model: String, val color: String)
 
 
-fun students(){
+fun students() {
     val student = Person (
         name = "John",
         age = 20,
@@ -24,7 +24,7 @@ fun students(){
     println("The student found on the road is a ${student.gender} named ${student.name} and he is ${student.age} years old")
 }
 
-fun cars(){
+fun cars() {
     val car = Vehicle (
         name = "Tesla",
         model = "S Plaid",
