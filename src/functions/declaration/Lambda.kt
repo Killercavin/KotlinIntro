@@ -4,6 +4,7 @@ val add = { x: Int, y: Int -> x + y } // this is a lambda function
 
 fun main() {
     println(add(1, 2))
+    println(add.invoke(1, 2))
 }
 
 /*

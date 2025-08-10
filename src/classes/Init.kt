@@ -1,6 +1,6 @@
 package classes
 
-/**
+/*
  * If you need to initialize a property to something more complex than a simple
  * expression, or if there’s extra code you want to run when each object is created,
  * you can use one or more initializer blocks
