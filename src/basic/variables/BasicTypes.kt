@@ -1,4 +1,4 @@
-package basic
+package basic.variables
 
 fun main(){
     /*

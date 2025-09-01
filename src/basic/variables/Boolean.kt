@@ -1,4 +1,4 @@
-package basic
+package basic.variables
 
 /**
  * Boolean values are used to store value that are either true or false(1, 0)

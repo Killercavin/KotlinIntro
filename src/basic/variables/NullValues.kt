@@ -1,3 +1,5 @@
+package basic.variables
+
 // Kotlin too like other programming allows null value assignment
 
 fun main(){
