@@ -1,4 +1,4 @@
-package dsa.searching;
+package dsa.searching.linear;
 
 public class FindMin {
 
