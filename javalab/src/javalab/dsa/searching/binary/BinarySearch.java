@@ -3,7 +3,8 @@ package javalab.dsa.searching.binary;
 public class BinarySearch {
     public static void main(String[] args) {
         int[] array = {1, 2, 3, 4, 5, 6, 7, 8, 9};
-        int result = binarySearch(array, 81);
+        int target = 81;
+        int result = binarySearch(array, target);
         System.out.println(result);
     }
 
