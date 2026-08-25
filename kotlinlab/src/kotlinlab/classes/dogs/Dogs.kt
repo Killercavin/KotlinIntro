@@ -33,7 +33,7 @@ class Dogs(val name: String, weightParam: Int, breedParam: String) {
 }
 
 fun main() {
-    val myDog = _root_ide_package_.kotlinlab.classes.dogs.Dogs("Fido", 70, "Mixed")
+    val myDog = Dogs("Fido", 70, "Mixed")
     myDog.bark()
     myDog.weight = 75
     println("Weight in Kgs is ${myDog.weightInKgs}")
@@ -45,8 +45,8 @@ fun main() {
     myDog.activities.forEach { println("My dog enjoys $it") }
 
     val dogs = arrayOf(
-        _root_ide_package_.kotlinlab.classes.dogs.Dogs("Kelpie", 20, "Westie"),
-        _root_ide_package_.kotlinlab.classes.dogs.Dogs("Ripper", 10, "Poodle")
+        Dogs("Kelpie", 20, "Westie"),
+        Dogs("Ripper", 10, "Poodle")
     )
     dogs[0].bark()
     dogs[0].weight = 15

@@ -20,6 +20,6 @@ class Size constructor(width: Int, height: Int) {
 }
 
 fun main() {
-    val shape = _root_ide_package_.kotlinlab.classes.constructors.primary.ShapeOne(2, 2)
+    val shape = ShapeOne(2, 2)
     println("The area of the shape is ${shape.area()}")
 }

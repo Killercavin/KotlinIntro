@@ -14,7 +14,7 @@ public class Stacks {
         myStack.addAll(List.of(3, 4, 5));
         myStack.addAll(5, List.of(6, 7, 8, 9, 10));
 
-        // peek- fetching the top element
+        // peek - fetching the top element
         System.out.println(myStack.peek());
 
         // removing

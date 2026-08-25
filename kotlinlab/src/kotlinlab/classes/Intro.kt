@@ -1,4 +1,4 @@
-package kotlinlabb.classes
+package kotlinlab.classes
 
 /**
  * Classes are templates that allow you to

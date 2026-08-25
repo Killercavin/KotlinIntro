@@ -14,16 +14,16 @@ class Car(var color: String = "Maroon", val model: String = "Chevrolet-Trailblaz
 fun main() {
     // creating the object
     val car =
-        _root_ide_package_.kotlinlab.classes.constructors.primary.Car() // we created the car object with default argument
+        Car() // we created the car object with default argument
     println(car.testCar())
 
     // creating the object with named arguments now
     val car1 =
-        _root_ide_package_.kotlinlab.classes.constructors.primary.Car(color = "Blue") // we've left the model as default argument and called the color as named
+        Car(color = "Blue") // we've left the model as default argument and called the color as named
     println(car1.testCar())
 
     // calling both as named arguments
-    val car2 = _root_ide_package_.kotlinlab.classes.constructors.primary.Car(color = "Black", model = "White")
+    val car2 = Car(color = "Black", model = "White")
     println(car2.testCar())
 
     // but Kotlin always infers the arguments from the constructor therefore the mutability and immutability is carried along

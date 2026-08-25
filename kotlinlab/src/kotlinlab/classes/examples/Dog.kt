@@ -18,7 +18,7 @@ class Dog(
 
 fun main() {
     // creating an object from a class
-    val myDog = _root_ide_package_.kotlinlab.classes.examples.Dog(
+    val myDog = Dog(
         name = "Fido",
         weight = 70,
         breed = "Mixed"

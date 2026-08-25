@@ -7,6 +7,6 @@ class SingleLine (val description:  String)
 
 fun main() {
     val singleLine =
-        _root_ide_package_.kotlinlab.classes.SingleLine("This class is saying that it has no body, therefore it is called a single line class.")
+        SingleLine("This class is saying that it has no body, therefore it is called a single line class.")
     println(singleLine.description)
 }

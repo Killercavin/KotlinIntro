@@ -55,7 +55,7 @@ abstract class Animal(
     val image: String,
     val food: String,
     val habitat: String,
-) : kotlinlab.classes.inheritance.animal.Roamable {
+) : Roamable {
     val hunger: Int = 10
 
     abstract fun makeNoise()
@@ -77,7 +77,7 @@ abstract class Feline(
     image: String,
     food: String,
     habitat: String,
-) : kotlinlab.classes.inheritance.animal.Animal(image, food, habitat) {
+) : Animal(image, food, habitat) {
     override fun roam() {
         println("The Feline is roaming")
     }
@@ -88,7 +88,7 @@ abstract class Canine(
     image: String,
     food: String,
     habitat: String,
-) : kotlinlab.classes.inheritance.animal.Animal(image, food, habitat) {
+) : Animal(image, food, habitat) {
     override fun roam() {
         println("The Canine is roaming")
     }
@@ -99,7 +99,7 @@ class Hippo(
     image: String = "hippo.png",
     food: String = "grass",
     habitat: String = "water"
-) : kotlinlab.classes.inheritance.animal.Animal(image, food, habitat) {
+) : Animal(image, food, habitat) {
     override fun makeNoise() {
         println("Hippo sound!")
     }
@@ -120,7 +120,7 @@ class Lion(
     image: String = "lion.png",
     food: String = "meat",
     habitat: String = "forests"
-) : kotlinlab.classes.inheritance.animal.Feline(image, food, habitat) {
+) : Feline(image, food, habitat) {
     override fun makeNoise() {
         println("Lion sound!")
     }
@@ -134,7 +134,7 @@ class Cheetah(
     image: String = "cheetah.png",
     food: String = "meat",
     habitat: String = "forests"
-) : kotlinlab.classes.inheritance.animal.Feline(image, food, habitat) {
+) : Feline(image, food, habitat) {
     override fun makeNoise() {
         println("Cheetah sound!")
     }
@@ -148,7 +148,7 @@ class Lynx(
     image: String = "lynx.png",
     food: String = "meat",
     habitat: String = "forests"
-) : kotlinlab.classes.inheritance.animal.Feline(image, food, habitat) {
+) : Feline(image, food, habitat) {
     override fun makeNoise() {
         println("Lynx sound!")
     }
@@ -161,7 +161,7 @@ open class Cat(
     image: String = "cat.png",
     food: String = "meat",
     habitat: String = "home"
-) : kotlinlab.classes.inheritance.animal.Feline(image, food, habitat) {
+) : Feline(image, food, habitat) {
     override fun makeNoise() {
         println("Cat sound!")
     }
@@ -170,7 +170,7 @@ open class Cat(
     }
 }
 
-class Kitten(image: String = "kitten.png", food: String = "meat", habitat: String = "home") : kotlinlab.classes.inheritance.animal.Cat(image, food, habitat) {
+class Kitten(image: String = "kitten.png", food: String = "meat", habitat: String = "home") : Cat(image, food, habitat) {
     override fun makeNoise() {
         println("Meow! Meow!")
     }
@@ -187,7 +187,7 @@ class Wolf(
     image: String = "wolf.png",
     food: String = "meat",
     habitat: String = "forests"
-) : kotlinlab.classes.inheritance.animal.Canine(image, food, habitat) {
+) : Canine(image, food, habitat) {
     override fun makeNoise() {
         println("Wolf sound!")
     }
@@ -201,7 +201,7 @@ class Fox(
     image: String = "fox.png",
     food: String = "meat",
     habitat: String = "forests"
-) : kotlinlab.classes.inheritance.animal.Canine(image, food, habitat) {
+) : Canine(image, food, habitat) {
     override fun makeNoise() {
         println("Fox sound!")
     }
@@ -212,14 +212,14 @@ class Fox(
 
 // auxiliary class Vet
 class Vet {
-    fun giveShort(animal: kotlinlab.classes.inheritance.animal.Animal) {
+    fun giveShort(animal: Animal) {
         // do something medical
         animal.makeNoise()
     }
 }
 
 // interfaced class Vehicle inheriting from Roamable
-class Vehicle : kotlinlab.classes.inheritance.animal.Roamable {
+class Vehicle : Roamable {
     override fun roam() {
         println("The Vehicle is roaming")
     }
@@ -227,12 +227,12 @@ class Vehicle : kotlinlab.classes.inheritance.animal.Roamable {
 
 fun main() {
     val animals = arrayOf(
-        _root_ide_package_.kotlinlab.classes.inheritance.animal.Hippo(),
-        _root_ide_package_.kotlinlab.classes.inheritance.animal.Lion(),
-        _root_ide_package_.kotlinlab.classes.inheritance.animal.Cheetah(),
-        _root_ide_package_.kotlinlab.classes.inheritance.animal.Lynx(),
-        _root_ide_package_.kotlinlab.classes.inheritance.animal.Wolf(),
-        _root_ide_package_.kotlinlab.classes.inheritance.animal.Fox()
+        Hippo(),
+        Lion(),
+        Cheetah(),
+        Lynx(),
+        Wolf(),
+        Fox()
     )
 
     for (animal in animals) {
@@ -244,18 +244,18 @@ fun main() {
         println(animal.habitat)
     }
 
-    val vet = _root_ide_package_.kotlinlab.classes.inheritance.animal.Vet()
-    vet.giveShort(_root_ide_package_.kotlinlab.classes.inheritance.animal.Wolf())
+    val vet = Vet()
+    vet.giveShort(Wolf())
 
     val roamable = arrayOf(
-        _root_ide_package_.kotlinlab.classes.inheritance.animal.Hippo(),
-        _root_ide_package_.kotlinlab.classes.inheritance.animal.Wolf(),
-        _root_ide_package_.kotlinlab.classes.inheritance.animal.Vehicle()
+        Hippo(),
+        Wolf(),
+        Vehicle()
     )
     for (item in roamable) {
         item.roam()
 
-        if (item is kotlinlab.classes.inheritance.animal.Animal) {
+        if (item is Animal) {
             item.makeNoise()
             item.eat()
         }

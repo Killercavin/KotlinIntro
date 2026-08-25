@@ -13,6 +13,9 @@ class Size {
 fun main() {
     // creating objects
     val size =
-        _root_ide_package_.kotlinlab.classes.constructors.Size() // when we call the class like this with no arguments, by default  constructor is created
+        Size() // when we call the class like this with no arguments, by default  constructor is created
     // the default constructor created is a primary constructor
+
+    println(size.height)
+    println(size.width)
 }

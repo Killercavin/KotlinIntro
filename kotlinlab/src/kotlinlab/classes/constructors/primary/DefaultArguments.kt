@@ -12,10 +12,10 @@ class Circle(radius: Double = 5.0) {
 
 fun main() {
     val circle =
-        _root_ide_package_.kotlinlab.classes.constructors.primary.Circle() // this call will use default argument value
+        Circle() // this call will use default argument value
     println("The initial area: ${circle.area}")
 
     val circle1 =
-        _root_ide_package_.kotlinlab.classes.constructors.primary.Circle(7.0) // modifying the radius to another value
+        Circle(7.0) // modifying the radius to another value
     println("The area of the circle after the change in radius is ${circle1.area}")
 }

@@ -13,6 +13,6 @@ class Shape(val width: Int, val height: Int) {
 }
 
 fun main() {
-    val shape = _root_ide_package_.kotlinlab.classes.constructors.primary.Shape(2, 2)
+    val shape = Shape(2, 2)
     println(shape.area())
 }

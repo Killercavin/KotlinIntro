@@ -7,6 +7,7 @@ public class Car {
     private final int year;
 
 
+    // constructor
     public Car(String model, String color, double price, int year) {
         this.model = model;
         this.color = color;
@@ -14,6 +15,7 @@ public class Car {
         this.year = year;
     }
 
+    // getters
     String getModel() {
         return model;
     }
@@ -27,6 +29,7 @@ public class Car {
         return year;
     }
 
+    // setters
     public void setPrice(double price) {
         if (price >= 0) {
             this.price = price;

@@ -13,6 +13,6 @@ class EmptyConstructor {
 }
 
 fun main() {
-    val emptyConstructor = _root_ide_package_.kotlinlab.classes.constructors.EmptyConstructor()
+    val emptyConstructor = EmptyConstructor()
     emptyConstructor.echo()
 }
